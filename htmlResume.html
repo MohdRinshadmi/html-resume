@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume - Mohammed Rinshad M I</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0;
+            font-family: sans-serif;
+            font-size: 10pt;
+            color: #000;
+            line-height: 1.2;
+        }
+
+        /* A4 Page */
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            padding: 9.5mm 11mm;
+            margin: 12mm auto;
+            background: #fff;
+            box-shadow: 0 2px 18px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        /* ── Header ── */
+        header {
+            text-align: center;
+        }
+        header * {
+            text-align: center !important;
+        }
+        h1 {
+            margin: 0 0 2px 0;
+            font-size: 22pt;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .subtitle {
+            font-size: 10pt;
+            font-weight: normal;
+            margin: 0 0 2px 0;
+        }
+        .contact {
+            font-size: 9pt;
+            line-height: 1.3;
+        }
+        .contact .line {
+            display: block;
+            text-align: center;
+        }
+
+        /* ── Harvard Section Headers ── */
+        .section-header {
+            display: flex;
+            align-items: center;
+            font-size: 1.15em;
+            font-weight: bold;
+            letter-spacing: 0px;
+            margin: 3px 0 2px 0;
+        }
+        .section-header::before,
+        .section-header::after {
+            content: "";
+            flex: 1;
+            border-bottom: 0.5pt solid #000;
+            margin: 0 5px;
+        }
+
+        /* ── Entry rows (Experience / Education) ── */
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 10pt;
+            margin-top: 3px;
+            margin-bottom: 1px;
+        }
+        .entry-left {
+            flex: 1;
+        }
+        .entry-date {
+            min-width: 4.15cm;
+            text-align: right;
+            white-space: nowrap;
+            padding-left: 6px;
+        }
+
+        /* ── Projects ── */
+        .project-title {
+            font-weight: bold;
+            font-size: 10pt;
+            margin-top: 4px;
+            margin-bottom: 0;
+        }
+        .tech-stack {
+            font-size: 9pt;
+            line-height: 1.25;
+            margin: 0;
+        }
+
+        /* ── Body text & lists ── */
+        p {
+            font-size: 10pt;
+            line-height: 1.28;
+            text-align: justify;
+            margin: 1px 0;
+        }
+        ul {
+            margin: 1px 0 0 0;
+            padding-left: 13px;
+        }
+        li {
+            font-size: 10pt;
+            line-height: 1.28;
+            text-align: justify;
+            margin-bottom: 0;
+            padding-left: 2px;
+        }
+
+        /* ── Skills ── */
+        .skills-grid {
+            display: grid;
+            gap: 2px;
+        }
+        .skills-grid div {
+            font-size: 10pt;
+            line-height: 1.28;
+        }
+
+        /* ── Print / no-print ── */
+        .no-print {
+            text-align: center;
+            padding: 14px;
+        }
+        @media print {
+            body { background: none; }
+            .a4-page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                height: 297mm;
+                overflow: hidden;
+            }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print">
+        <button onclick="window.print()"
+            style="padding: 10px 24px; cursor: pointer; font-size: 11pt; font-weight: bold; border: 1.5px solid #333; background: #fff;">
+            Print / Save as PDF
+        </button>
+    </div>
+
+    <div class="a4-page">
+
+        <!-- HEADER -->
+        <header>
+            <h1>Mohammed Rinshad M I</h1>
+            <p class="subtitle">Software Engineer | Full-Stack Web &amp; Mobile | React, React Native &amp; Node.js</p>
+            <div class="contact">
+                <span class="line">
+                    Palakkad, Kerala, India &nbsp;&bull;&nbsp;
+                    rinshad803@gmail.com &nbsp;&bull;&nbsp;
+                    +91 88486 75355 &nbsp;&bull;&nbsp;
+                    linkedin.com/in/mohd-rinshadmi &nbsp;&bull;&nbsp;
+                    github.com/MohdRinshadmi
+                </span>
+            </div>
+        </header>
+
+        <!-- SUMMARY -->
+        <section>
+            <div class="section-header">Summary</div>
+            <p>In 2.5+ years I've shipped React Native apps from first commit to the App Store and Play Store, including leading a live JavaScript-to-TypeScript migration that eliminated a category of runtime failures, and integrating Stripe and PayPal subscription flows that processed payments without a single reconciliation failure post-launch. I own releases, not just pull requests — signing, store compliance, production monitoring, and the architectural decisions that prevent fires before they start.</p>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section>
+            <div class="section-header">Experience</div>
+            <div class="entry-header">
+                <span class="entry-left">
+                    <strong>Infinite Open Source Solution LLP</strong>, Full Stack Developer – Calicut, Kerala
+                </span>
+                <span class="entry-date">Nov 2023 – Present</span>
+            </div>
+            <ul>
+                <li>Architected a cross-platform component library deployed across 20+ web and mobile apps, cutting delivery time by 30% — enabling a small team to ship production features at startup speed without rebuilding from scratch each cycle.</li>
+                <li>Hardened authentication across multiple production systems using JWT and OAuth, building a reusable auth layer that reduced per-project integration effort and protected sensitive user data at every entry point.</li>
+                <li>Owned payment infrastructure end-to-end — Stripe and PayPal subscription flows, webhook verification, retry logic, and reconciliation — shipping full-stack billing across multiple products without a single post-launch failure.</li>
+                <li>Profiled and resolved MongoDB and MySQL bottlenecks across production REST APIs, cutting endpoint response times by up to 35% on high-traffic routes and reducing infrastructure load at scale.</li>
+                <li>Led a full production JavaScript-to-TypeScript migration across a React Native codebase, enforcing strict typing and type-safe API contracts that eliminated a class of runtime errors and established the TypeScript foundation all future development was built on.</li>
+                <li>Owned the complete cross-platform release pipeline for multiple React Native apps — App Store and Play Store — managing signing, build configuration, compliance, and staged releases independently, end-to-end from code to production.</li>
+            </ul>
+        </section>
+
+        <!-- PROJECTS -->
+        <section>
+            <div class="section-header">Projects</div>
+
+            <div class="project-title">Dating Platform</div>
+            <div class="tech-stack">React Native &bull; Node.js &bull; WebSockets &bull; PayPal</div>
+            <ul>
+                <li>Engineered real-time chat system supporting live messaging, notifications, and presence tracking.</li>
+                <li>Implemented subscription payments and webhook verification to automate billing and account access.</li>
+                <li>Built scalable backend handling real-time synchronization across users and devices.</li>
+            </ul>
+
+            <div class="project-title">Real-Time Task Management App</div>
+            <div class="tech-stack">React &bull; Node.js &bull; MongoDB</div>
+            <ul>
+                <li>Built real-time task updates enabling multi-user collaboration without page refresh.</li>
+                <li>Designed modular backend architecture that cut new feature integration time by ~25%.</li>
+                <li>Improved API reliability and response speed through optimized query design.</li>
+            </ul>
+
+            <div class="project-title">Desklog — Employee Workforce Management Platform</div>
+            <div class="tech-stack">React Native &bull; Redux Toolkit &bull; React Query &bull; SQLite &bull; Sentry</div>
+            <ul>
+                <li>Engineered persistent background geolocation with offline SQLite buffering and exponential backoff retries for no-network tracking.</li>
+                <li>Implemented real-time GPS/timer dashboard switching via Axios interceptors, propagating admin changes instantly.</li>
+                <li>Integrated Sentry for production crash monitoring with tracing and profiling across iOS and Android.</li>
+            </ul>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+            <div class="section-header">Education</div>
+            <div class="entry-header">
+                <span class="entry-left">
+                    <strong>BBA &nbsp; SJES College of Management</strong>, Bangalore North University — Bangalore, India
+                </span>
+                <span class="entry-date">June 2019 – Oct 2022</span>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section>
+            <div class="section-header">Skills</div>
+            <div class="skills-grid">
+                <div><strong>Languages:</strong> TypeScript, JavaScript (ES6+), Python</div>
+                <div><strong>Mobile &amp; Frontend:</strong> React Native, React, Redux Toolkit, React Query, Zustand, HTML5</div>
+                <div><strong>Backend:</strong> Node.js, Express.js, REST APIs, WebSockets, Authentication (JWT, OAuth), API Security</div>
+                <div><strong>Databases:</strong> MongoDB, MySQL</div>
+                <div><strong>DevOps &amp; Cloud:</strong> Docker, AWS (EC2, S3), CI/CD, Git, GitHub, Sentry, Android Studio, Xcode, Reactotron</div>
+                <div><strong>AI Tools:</strong> Claude AI (daily debugging &amp; development workflow)</div>
+                <div><strong>Methodologies:</strong> Clean Architecture, RESTful API Design, MVC Architecture</div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
