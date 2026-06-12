@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume - Mohammed Rinshad M I — AI Augmented Full Stack Engineer</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0;
+            font-family: sans-serif;
+            font-size: 10pt;
+            color: #000;
+            line-height: 1.2;
+        }
+
+        /* A4 Page */
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            padding: 9.5mm 11mm;
+            margin: 12mm auto;
+            background: #fff;
+            box-shadow: 0 2px 18px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        /* ── Header ── */
+        header {
+            text-align: center;
+        }
+        header * {
+            text-align: center !important;
+        }
+        h1 {
+            margin: 0 0 2px 0;
+            font-size: 22pt;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .subtitle {
+            font-size: 10pt;
+            font-weight: normal;
+            margin: 0 0 2px 0;
+        }
+        .contact {
+            font-size: 9pt;
+            line-height: 1.3;
+        }
+        .contact .line {
+            display: block;
+            text-align: center;
+        }
+        .contact a {
+            color: #000;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        .contact .ext {
+            font-size: 7.5pt;
+            vertical-align: super;
+            color: #444;
+        }
+
+        /* ── Harvard Section Headers ── */
+        .section-header {
+            display: flex;
+            align-items: center;
+            font-size: 1.15em;
+            font-weight: bold;
+            letter-spacing: 0px;
+            margin: 3px 0 2px 0;
+        }
+        .section-header::before,
+        .section-header::after {
+            content: "";
+            flex: 1;
+            border-bottom: 0.5pt solid #000;
+            margin: 0 5px;
+        }
+
+        /* ── Entry rows (Experience / Education) ── */
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 10pt;
+            margin-top: 3px;
+            margin-bottom: 1px;
+        }
+        .entry-left {
+            flex: 1;
+        }
+        .entry-date {
+            min-width: 4.15cm;
+            text-align: right;
+            white-space: nowrap;
+            padding-left: 6px;
+        }
+
+        /* ── Projects ── */
+        .project-title {
+            font-weight: bold;
+            font-size: 10pt;
+            margin-top: 4px;
+            margin-bottom: 0;
+        }
+        .tech-stack {
+            font-size: 9pt;
+            line-height: 1.25;
+            margin: 0;
+        }
+
+        /* ── Body text & lists ── */
+        p {
+            font-size: 10pt;
+            line-height: 1.28;
+            text-align: justify;
+            margin: 1px 0;
+        }
+        ul {
+            margin: 1px 0 0 0;
+            padding-left: 13px;
+        }
+        li {
+            font-size: 10pt;
+            line-height: 1.28;
+            text-align: justify;
+            margin-bottom: 0;
+            padding-left: 2px;
+        }
+
+        /* ── Skills ── */
+        .skills-grid {
+            display: grid;
+            gap: 2px;
+        }
+        .skills-grid div {
+            font-size: 10pt;
+            line-height: 1.28;
+        }
+
+        /* ── Print / no-print ── */
+        .no-print {
+            text-align: center;
+            padding: 14px;
+        }
+        @media print {
+            body { background: none; }
+            .a4-page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                height: 297mm;
+                overflow: hidden;
+            }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print">
+        <button onclick="window.print()"
+            style="padding: 10px 24px; cursor: pointer; font-size: 11pt; font-weight: bold; border: 1.5px solid #333; background: #fff;">
+            Print / Save as PDF
+        </button>
+    </div>
+
+    <div class="a4-page">
+
+        <!-- HEADER -->
+        <header>
+            <h1>Mohammed Rinshad M I</h1>
+            <p class="subtitle">AI Full Stack Engineer | Next.js, Node.js &amp; TypeScript | LLM Apps, RAG, Multi-Agent Systems &amp; Cloud-Native APIs</p>
+            <div class="contact">
+                <span class="line">
+                    Palakkad, Kerala, India &nbsp;&bull;&nbsp;
+                    <a href="mailto:rinshad803@gmail.com">rinshad803@gmail.com</a> &nbsp;&bull;&nbsp;
+                    +91 88486 75355 &nbsp;&bull;&nbsp;
+                    <a href="https://linkedin.com/in/mohd-rinshadmi" target="_blank" rel="noopener">linkedin.com/in/mohd-rinshadmi <span class="ext">&#x2197;</span></a> &nbsp;&bull;&nbsp;
+                    <a href="https://github.com/MohdRinshadmi" target="_blank" rel="noopener">github.com/MohdRinshadmi <span class="ext">&#x2197;</span></a>
+                </span>
+            </div>
+        </header>
+
+        <!-- SUMMARY -->
+        <section>
+            <div class="section-header">Summary</div>
+            <p>AI-focused Full Stack Engineer with 2.5+ years shipping 20+ production systems on React, Next.js, TypeScript, Node.js, and AWS. Build React UIs with hooks, React Server Components, SSR, Redux Toolkit, React Query, and Tailwind — wired to Node.js APIs running LLM applications, RAG, multi-agent systems, and tool/function calling with Claude, OpenAI, LangChain, and the Vercel AI SDK, backed by PostgreSQL + pgvector, Redis, WebSockets, and event-driven microservices on Docker and serverless. Cut API latency 35%, eliminated a recurring runtime-error class via a live JS→TypeScript migration, and processed Stripe/PayPal billing with zero reconciliation failures.</p>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section>
+            <div class="section-header">Experience</div>
+            <div class="entry-header">
+                <span class="entry-left">
+                    <strong>Infinite Open Source Solution LLP</strong>, Full Stack Developer – Calicut, Kerala
+                </span>
+                <span class="entry-date">Nov 2023 – Present</span>
+            </div>
+            <ul>
+                <li><strong>Cut feature delivery time 30% across 20+ web and mobile apps</strong> by architecting a shared TypeScript component &amp; API-contract layer across React, Next.js, and React Native.</li>
+                <li><strong>Shipped production LLM features via the Vercel AI SDK</strong> — Claude/OpenAI streaming completions, tool/function calling, and RAG over PostgreSQL + pgvector inside Next.js Server Components and Node.js APIs.</li>
+                <li><strong>Reduced API response times by 35% on high-traffic routes</strong> by profiling and re-indexing MongoDB, MySQL, and PostgreSQL queries behind real-time chat, payments, and AI dashboards.</li>
+                <li><strong>Designed multi-agent and tool-calling orchestration over Claude/OpenAI</strong> using LangChain/LangGraph patterns — wiring retrieval, function tools, and human-in-the-loop approvals.</li>
+                <li><strong>Processed Stripe and PayPal subscriptions with zero reconciliation failures</strong> by owning end-to-end billing — webhook verification, idempotent reconciliation, and retry logic.</li>
+                <li><strong>Established cloud-native observability and auth baselines</strong> on AWS (EC2, S3, Lambda) with Docker, GitHub Actions CI/CD, Sentry, and a reusable JWT/OAuth layer — cutting crash MTTR ~50%.</li>
+            </ul>
+        </section>
+
+        <!-- PROJECTS -->
+        <section>
+            <div class="section-header">Projects</div>
+
+            <div class="project-title">Cloud-Native IoT Analytics Dashboard</div>
+            <div class="tech-stack">React &bull; Next.js (RSC) &bull; TypeScript &bull; Node.js &bull; AWS (IoT Core, Lambda, S3) &bull; PostgreSQL + TimescaleDB &bull; Redis &bull; Kafka &bull; Docker</div>
+            <ul>
+                <li><strong>Architected an event-driven ingestion pipeline</strong> absorbing telemetry from 10k+ devices via MQTT/Kafka into TimescaleDB for sub-second query latency.</li>
+                <li><strong>Streamed live metrics to a React/Next.js dashboard</strong> over a WebSocket gateway with Redis pub/sub, deployed on AWS via Lambda and GitHub Actions — cutting alert latency ~60%.</li>
+            </ul>
+
+            <div class="project-title">AI Life Assistant Super App</div>
+            <div class="tech-stack">React &bull; Next.js (App Router, RSC) &bull; Node.js &bull; TypeScript &bull; LangGraph patterns &bull; Claude API &bull; OpenAI API &bull; PostgreSQL + pgvector &bull; Redis &bull; MCP Servers</div>
+            <ul>
+                <li><strong>Architected an agentic multi-agent backend with a React/Next.js streaming chat UI</strong> where Claude/OpenAI agents plan tasks, call tools (calendar, email, web search, payments), and hand off via a typed message bus.</li>
+                <li><strong>Implemented per-user RAG with pgvector embeddings and semantic search</strong> over personal data and exposed internal tools as MCP servers consumed by Claude Code, Cursor, and the assistant.</li>
+            </ul>
+
+            <div class="project-title">AI-Powered Real-Time Collaboration Platform</div>
+            <div class="tech-stack">React &bull; Next.js &bull; TypeScript &bull; Node.js &bull; WebSockets &bull; Yjs (CRDT) &bull; PostgreSQL + pgvector &bull; Redis &bull; AWS</div>
+            <ul>
+                <li><strong>Engineered a stateless WebSocket fan-out server backing a React + Yjs CRDT editor</strong> — sustaining concurrent editors with channel-based routing and Redis pub/sub.</li>
+                <li><strong>Integrated streaming Claude/OpenAI tool calling</strong> for inline summarization and agent actions, plus an event-driven audit/ACL layer with JWT/OAuth and idempotent webhooks on AWS.</li>
+            </ul>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+            <div class="section-header">Education</div>
+            <div class="entry-header">
+                <span class="entry-left">
+                    <strong>BBA &nbsp; SJES College of Management</strong>, Bangalore North University — Bangalore, India
+                </span>
+                <span class="entry-date">June 2019 – Oct 2022</span>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section>
+            <div class="section-header">Skills</div>
+            <div class="skills-grid">
+                <div><strong>Languages:</strong> TypeScript, JavaScript (ES6+), Python, SQL</div>
+                <div><strong>Frontend:</strong> React, Next.js (App Router, RSC, Server Actions, SSR), React Native, Tailwind CSS, shadcn/ui, Redux Toolkit, Zustand, React Query</div>
+                <div><strong>Backend:</strong> Node.js, Express.js, REST APIs, GraphQL (familiar), WebSockets, Event-Driven Architecture, Microservices, Serverless (Lambda), API Gateway, Webhooks, JWT/OAuth, Rate Limiting</div>
+                <div><strong>AI / LLM Engineering:</strong> Claude API, OpenAI API, Vercel AI SDK, LangChain, LangGraph, RAG, Embeddings, Semantic Search, pgvector, Tool/Function Calling, Multi-Agent Systems, Agentic AI, MCP Servers</div>
+                <div><strong>Databases:</strong> PostgreSQL, pgvector, MongoDB, MySQL, Redis, SQLite</div>
+                <div><strong>Cloud, DevOps &amp; Tooling:</strong> AWS (EC2, S3, Lambda, CloudWatch), Vercel, Docker, Kubernetes (familiar), GitHub Actions CI/CD, Nginx, EAS</div>
+                <div><strong>AI Dev Workflow &amp; Testing:</strong> Claude Code, Cursor, GitHub Copilot, Playwright, Sentry, Lighthouse</div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

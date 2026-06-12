@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume - Mohammed Rinshad M I — AI-Augmented React Native Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0;
+            font-family: sans-serif;
+            font-size: 10pt;
+            color: #000;
+            line-height: 1.6;
+        }
+
+        /* A4 Page */
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            padding: 8mm 11mm;
+            margin: 12mm auto;
+            background: #fff;
+            box-shadow: 0 2px 18px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            border: 0.75pt dotted #000;
+        }
+        .a4-page > section {
+            margin-bottom: 2px;
+        }
+        .a4-page > section:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ── Header ── */
+        header {
+            text-align: center;
+        }
+        header * {
+            text-align: center !important;
+        }
+        h1 {
+            margin: 0 0 2px 0;
+            font-size: 20pt;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .subtitle {
+            font-size: 10pt;
+            font-weight: normal;
+            margin: 0 0 2px 0;
+        }
+        .contact {
+            font-size: 9pt;
+            line-height: 1.3;
+        }
+        .contact .line {
+            display: block;
+            text-align: center;
+        }
+        .contact a {
+            color: #000;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        .contact .ext {
+            font-size: 7.5pt;
+            vertical-align: super;
+            color: #444;
+        }
+
+        /* ── Harvard Section Headers ── */
+        .section-header {
+            display: flex;
+            align-items: center;
+            font-size: 1.15em;
+            font-weight: bold;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            margin: 3px 0 3px 0;
+        }
+        .section-header::before,
+        .section-header::after {
+            content: "";
+            flex: 1;
+            border-bottom: 0.5pt solid #000;
+            margin: 0 5px;
+        }
+
+        /* ── Entry rows (Experience / Education) ── */
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 10pt;
+            margin-top: 3px;
+            margin-bottom: 1px;
+        }
+        .entry-left {
+            flex: 1;
+        }
+        .entry-date {
+            min-width: 4.15cm;
+            text-align: right;
+            white-space: nowrap;
+            padding-left: 6px;
+        }
+
+        /* ── Projects ── */
+        .project-title {
+            font-weight: bold;
+            font-size: 10pt;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+        .tech-stack {
+            font-size: 9pt;
+            line-height: 1.35;
+            margin: 1px 0 0 0;
+            color: #333;
+        }
+
+        /* ── Body text & lists ── */
+        p {
+            font-size: 10pt;
+            line-height: 1.32;
+            text-align: left;
+            margin: 1px 0;
+        }
+        ul {
+            margin: 2px 0 0 0;
+            padding-left: 16px;
+        }
+        li {
+            font-size: 10pt;
+            line-height: 1.32;
+            text-align: left;
+            margin-bottom: 1px;
+            padding-left: 3px;
+        }
+
+        /* ── Skills ── */
+        .skills-grid {
+            display: grid;
+            gap: 3px;
+        }
+        .skills-grid div {
+            font-size: 10pt;
+            line-height: 1.32;
+        }
+
+        /* ── Print / no-print ── */
+        .no-print {
+            text-align: center;
+            padding: 14px;
+        }
+        @media print {
+            body { background: none; }
+            .a4-page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                height: 297mm;
+                overflow: hidden;
+            }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print">
+        <button onclick="window.print()"
+            style="padding: 10px 24px; cursor: pointer; font-size: 11pt; font-weight: bold; border: 1.5px solid #333; background: #fff;">
+            Print / Save as PDF
+        </button>
+    </div>
+
+    <div class="a4-page">
+
+        <!-- HEADER -->
+        <header>
+            <h1>Mohammed Rinshad M I</h1>
+            <p class="subtitle">AI-Augmented React Native Engineer | Mobile + Full-Stack | Real-Time AI Chat, Voice AI, Native Modules &amp; TypeScript</p>
+            <div class="contact">
+                <span class="line">
+                    Palakkad, Kerala, India &nbsp;&bull;&nbsp;
+                    <a href="mailto:rinshad803@gmail.com">rinshad803@gmail.com</a> &nbsp;&bull;&nbsp;
+                    +91 88486 75355 &nbsp;&bull;&nbsp;
+                    <a href="https://linkedin.com/in/mohd-rinshadmi" target="_blank" rel="noopener">linkedin.com/in/mohd-rinshadmi <span class="ext">&#x2197;</span></a> &nbsp;&bull;&nbsp;
+                    <a href="https://github.com/MohdRinshadmi" target="_blank" rel="noopener">github.com/MohdRinshadmi <span class="ext">&#x2197;</span></a>
+                </span>
+            </div>
+        </header>
+
+        <!-- SUMMARY -->
+        <section>
+            <div class="section-header">Summary</div>
+            <p>React Native engineer with 2.6+ years shipping 15+ cross-platform apps to the App Store and Play Store — specializing in AI-powered mobile experiences: real-time AI chat, voice AI, streaming LLM responses, offline sync, push notifications, and WebRTC. Drove a live JS→TypeScript migration that eliminated a recurring runtime-error class, owned Stripe/PayPal billing with zero reconciliation failures, and cut API latency 35%. Integrates cloud and on-device AI (Claude, OpenAI, Whisper) and owns the release pipeline end-to-end — signing, store compliance, and monitoring.</p>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section>
+            <div class="section-header">Experience</div>
+            <div class="entry-header">
+                <span class="entry-left">
+                    <strong>Infinite Open Source Solution LLP</strong>, Full Stack Developer – Calicut, Kerala
+                </span>
+                <span class="entry-date">Nov 2023 – Present</span>
+            </div>
+            <ul>
+                <li><strong>Cut feature delivery time 30% across 20+ web and mobile apps</strong> by architecting a reusable cross-platform TypeScript component library that replaced per-project rebuilds.</li>
+                <li>Designed and implemented an<strong> Offline-First geolocation tracking system</strong> using React Native and SQLite, enabling reliable background location capture, local data buffering, and retry-based recovery mechanisms to ensure seamless workforce tracking even during prolonged network outages.</li>
+                <li><strong>Eliminated an entire class of production runtime errors</strong> via a full JS-to-TypeScript migration on a live React Native codebase with strict typing and type-safe API contracts.</li>
+                <li><strong>Shipped 5+ React Native apps to App Store and Play Store independently</strong> by owning the full release pipeline — signing, build configs, store compliance, and staged rollouts.</li>
+                <!-- <li><strong>Built native modules (Kotlin)</strong> bridging React Native to platform APIs — background geolocation, push notifications (FCM/APNs), and biometric auth.</li> -->
+                <li><strong>Processed Stripe and PayPal subscriptions with zero reconciliation failures</strong> by owning end-to-end billing — webhook verification, idempotent reconciliation, and retry logic.</li>
+            </ul>
+        </section>
+
+        <!-- PROJECTS -->
+        <section>
+            <div class="section-header">Projects</div>
+
+            <div class="project-title">AI Life Assistant Super App (React Native)</div>
+            <div class="tech-stack">React Native &bull; TypeScript &bull; OpenAI / Claude API &bull; Whisper &bull; WebSockets &bull; Reanimated &bull; Native Modules (Swift / Kotlin)</div>
+            <ul>
+                <li><strong>Built a voice-first AI assistant</strong> with streaming LLM chat, Whisper transcription, TTS playback, and tool calling — 60fps message animations on iOS and Android.</li>
+                <li><strong>Built a RAG pipeline</strong> — Gemini embeddings stored in PostgreSQL with pgvector, HNSW-indexed cosine similarity search injected into the LLM system prompt — and hardened the API with JWT refresh-token family rotation and Redis-backed, multi-instance-safe rate limiting.</li>
+                <li><strong>Engineered a custom native audio module (Swift / Kotlin)</strong> for low-latency mic capture and VAD, plus offline-first SQLite sync and push (FCM/APNs) for proactive agent actions.</li>
+            </ul>
+
+            <!-- <div class="project-title">Cloud-Native IoT Analytics Dashboard (Mobile Companion)</div>
+            <div class="tech-stack">React Native &bull; TypeScript &bull; WebSockets &bull; SQLite &bull; Redux Toolkit &bull; React Query &bull; Sentry</div>
+            <ul>
+                <li><strong>Streamed live device telemetry over WebSockets</strong> into virtualized charts with alert acknowledgment and on-call paging across iOS and Android.</li>
+                <li><strong>Engineered offline sync (SQLite + backoff retries)</strong> plus FCM/APNs deep-link alerts and Sentry tracing for production crash MTTR &lt; 1 hour.</li>
+            </ul> -->
+
+            <div class="project-title">AI-Powered Real-Time Collaboration Platform (React Native)</div>
+            <div class="tech-stack">React Native &bull; TypeScript &bull; Yjs (CRDT) &bull; WebSockets &bull; WebRTC &bull; OpenAI API</div>
+            <ul>
+                <li><strong>Built a CRDT-based collaboration app (Yjs)</strong> with live presence, typing indicators, and conflict-free offline edits across iOS and Android.</li>
+                <li><strong>Integrated WebRTC voice notes and inline AI</strong> — streaming OpenAI completions, summarization, and tool calling on document selections at 60fps via Reanimated.</li>
+            </ul>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+            <div class="section-header">Education</div>
+            <div class="entry-header">
+                <span class="entry-left">
+                    <strong>BBA &nbsp; SJES College of Management</strong>, Bangalore North University — Bangalore, India
+                </span>
+                <span class="entry-date">June 2019 – Oct 2022</span>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section>
+            <div class="section-header">Skills</div>
+            <div class="skills-grid">
+                <div><strong>Languages:</strong> TypeScript, JavaScript (ES6+), Kotlin (basic); Python, Go (familiar)</div>
+                <div><strong>React Native &amp; UI:</strong> Expo, Redux Toolkit, React Query, Reanimated, Gesture Handler, Native Modules</div>
+                <div><strong>Mobile Platform:</strong> Push Notifications (FCM / APNs), Background Tasks, Geolocation, In-App Purchases, App Store / Play Store releases</div>
+                <div><strong>Real-Time &amp; AI:</strong> WebSockets, WebRTC, offline sync (SQLite), OpenAI &amp; Claude APIs, Whisper, streaming chat, tool calling</div>
+                <div><strong>Backend &amp; Data:</strong> Node.js, Express, REST APIs, JWT / OAuth, MongoDB, MySQL, Redis</div>
+                <div><strong>Tooling &amp; DevOps:</strong> Git, GitHub Actions CI/CD, Docker, AWS, Xcode, Android Studio, Sentry, Claude Code / Cursor / Copilot</div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
