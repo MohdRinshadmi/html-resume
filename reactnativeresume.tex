@@ -1,0 +1,123 @@
+\documentclass[a4paper,10pt]{article}
+
+% ---------- Packages ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[
+  top=10mm,
+  bottom=10mm,
+  left=12mm,
+  right=12mm
+]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- Hyperref / PDF metadata (ATS-friendly: real text, no link recoloring) ----------
+\hypersetup{
+  pdftitle={Mohammed Rinshad M I - AI-Augmented React Native Engineer Resume},
+  pdfauthor={Mohammed Rinshad M I},
+  pdfsubject={AI-Augmented React Native Engineer},
+  pdfkeywords={React Native, TypeScript, JavaScript, Swift, Expo, Redux Toolkit, React Query, Reanimated, Native Modules, iOS, Android, WebSockets, WebRTC, RAG, LLM, Gemini, Groq, Whisper, Node.js, PostgreSQL, Redis, Stripe, App Store, Play Store},
+  colorlinks=false,
+  pdfborder={0 0 0}
+}
+
+% ---------- Global typography ----------
+\linespread{1.04}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% ---------- Section headers (Harvard style: title with horizontal rules) ----------
+\titleformat{\section}
+  {\large\bfseries\uppercase}
+  {}{0em}
+  {}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{4pt}
+
+% ---------- List styling ----------
+\setlist[itemize]{
+  leftmargin=14pt,
+  topsep=2pt,
+  itemsep=1.5pt,
+  parsep=0pt,
+  partopsep=0pt,
+  label=\textbullet
+}
+
+% ---------- Helper macros ----------
+% Experience / Education entry: title (left) + date (right)
+\newcommand{\entry}[2]{%
+  \noindent\textbf{#1}\hfill{#2}\par
+}
+
+% Project header: title (left) + tech stack on next line
+\newcommand{\project}[2]{%
+  \vspace{2pt}\noindent\textbf{#1}\par
+  {\small\itshape\color{black!70}#2}\par\vspace{1pt}%
+}
+
+% ---------- Document ----------
+\begin{document}
+
+% ===== Header =====
+\begin{center}
+  {\LARGE\bfseries Mohammed Rinshad M I}\\[3pt]
+  {\small AI-Augmented React Native Engineer $\vert$ Mobile + Full-Stack}\\[4pt]
+  {\footnotesize
+    Palakkad, Kerala, India \quad\textbullet\quad
+    \href{mailto:rinshad803@gmail.com}{rinshad803@gmail.com} \quad\textbullet\quad
+    \href{tel:+918848675355}{+91 88486 75355} \\[2pt]
+    \href{https://linkedin.com/in/mohd-rinshadmi}{linkedin.com/in/mohd-rinshadmi} \quad\textbullet\quad
+    \href{https://github.com/MohdRinshadmi}{github.com/MohdRinshadmi}
+  }
+\end{center}
+
+% ===== Summary =====
+\section{Summary}
+React Native engineer with 2.6+ years shipping 15+ cross-platform apps to the App Store and Play Store --- specializing in AI-powered mobile experiences: real-time AI chat, voice AI, streaming LLM responses, offline sync, push notifications, and WebRTC. Drove a live JS$\rightarrow$TypeScript migration that eliminated a recurring runtime-error class, owned Stripe/PayPal billing with zero reconciliation failures, and cut API latency 35\%. Integrates cloud and on-device AI (Gemini, Groq, Whisper) and owns the release pipeline end-to-end --- signing, store compliance, and monitoring.
+
+% ===== Experience =====
+\section{Experience}
+\entry{Infinite Open Source Solution LLP, Full Stack Developer -- Calicut, Kerala}{Nov 2023 -- Present}
+\begin{itemize}
+  \item \textbf{Cut feature delivery time 30\% across 20+ web and mobile apps} by architecting a reusable cross-platform TypeScript component library that replaced per-project rebuilds.
+  \item Designed and implemented an \textbf{Offline-First geolocation tracking system} using React Native and SQLite, enabling reliable background location capture, local data buffering, and retry-based recovery to ensure seamless workforce tracking even during prolonged network outages.
+  \item \textbf{Eliminated an entire class of production runtime errors} via a full JS-to-TypeScript migration on a live React Native codebase with strict typing and type-safe API contracts.
+  \item \textbf{Shipped 5+ React Native apps to App Store and Play Store independently} by owning the full release pipeline --- signing, build configs, store compliance, and staged rollouts.
+  \item \textbf{Processed Stripe and PayPal subscriptions with zero reconciliation failures} by owning end-to-end billing --- webhook verification, idempotent reconciliation, and retry logic.
+\end{itemize}
+
+% ===== Portfolio Projects =====
+\section{Portfolio Projects}
+\project{AI Life Assistant Super App (React Native)}{React Native \textbullet\ TypeScript \textbullet\ Gemini API / Groq API \textbullet\ Whisper \textbullet\ WebSockets \textbullet\ Reanimated \textbullet\ Native Modules (Swift)}
+\begin{itemize}
+  \item \textbf{Built a voice-first AI assistant} with streaming LLM chat, Whisper transcription, TTS playback, and tool calling --- 60fps message animations on iOS and Android.
+  \item \textbf{Built a RAG pipeline} --- Gemini embeddings stored in PostgreSQL with pgvector, HNSW-indexed cosine similarity search injected into the LLM system prompt --- and hardened the API with JWT refresh-token family rotation and Redis-backed, multi-instance-safe rate limiting.
+  \item \textbf{Engineered a custom native audio module (Swift)} for low-latency mic capture and VAD, plus offline-first SQLite sync and push (FCM/APNs) for proactive agent actions.
+\end{itemize}
+
+\project{AI-Powered Real-Time Collaboration Platform (React Native)}{React Native \textbullet\ TypeScript \textbullet\ Yjs (CRDT) \textbullet\ WebSockets \textbullet\ WebRTC \textbullet\ Groq API}
+\begin{itemize}
+  \item \textbf{Built a CRDT-based collaboration app (Yjs)} with live presence, typing indicators, and conflict-free offline edits across iOS and Android.
+  \item \textbf{Integrated WebRTC voice notes and inline AI} --- streaming Groq completions, summarization, and tool calling on document selections at 60fps via Reanimated.
+\end{itemize}
+
+% ===== Skills =====
+\section{Skills}
+\begin{itemize}[label={},leftmargin=0pt,itemsep=1.5pt]
+  \item \textbf{Languages:} TypeScript, JavaScript (ES6+); Python (familiar)
+  \item \textbf{React Native \& UI:} Expo, Redux Toolkit, React Query, Reanimated, Gesture Handler, Native Modules
+  \item \textbf{Mobile Platform:} Push Notifications (FCM / APNs), Background Tasks, Geolocation, In-App Purchases, App Store / Play Store releases
+  \item \textbf{Real-Time \& AI:} WebSockets, WebRTC, offline sync (SQLite), Gemini \& Groq APIs, Whisper, streaming chat, tool calling
+  \item \textbf{Backend \& Data:} Node.js, Express, REST APIs, JWT / OAuth, MongoDB, MySQL, Redis
+  \item \textbf{Tooling \& DevOps:} Git, GitHub Actions CI/CD, Docker, AWS, Xcode, Android Studio, Sentry, Claude Code / Cursor / Copilot
+\end{itemize}
+
+% ===== Education =====
+\section{Education}
+\entry{BBA, SJES College of Management, Bangalore North University -- Bangalore, India}{June 2019 -- Oct 2022}
+
+\end{document}

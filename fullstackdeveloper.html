@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Mohammed Rinshad M I — AI Full-Stack Engineer</title>
+    <title>Mohammed Rinshad M I — Full-Stack Software Engineer Resume</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet">
@@ -21,10 +21,10 @@
             margin: 0;
             padding: 0;
             background-color: #e6e6e6;
-            font-family: Carlito, Calibri, "Segoe UI", Arial, sans-serif;
+            font-family: 'Carlito', sans-serif;
             font-size: 10.5pt;
             color: #000;
-            line-height: 1.4;
+            line-height: 1.38;
         }
 
         /* ── A4 Pages ── */
@@ -50,8 +50,9 @@
             letter-spacing: 0.5px;
         }
         .subtitle {
-            font-size: 10.5pt;
+            font-size: 9pt;
             font-weight: normal;
+            white-space: nowrap;
             margin: 0 0 4px 0;
             color: #1a1a1a;
         }
@@ -74,7 +75,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.6px;
-            margin: 14px 0 6px 0;
+            margin: 11px 0 5px 0;
             padding-bottom: 2px;
             border-bottom: 1pt solid #000;
         }
@@ -86,6 +87,9 @@
         .summary {
             margin: 0;
             text-align: justify;
+        }
+        .summary + .summary {
+            margin-top: 5px;
         }
 
         /* ── Entry rows (Experience / Education) ── */
@@ -127,7 +131,7 @@
             padding-left: 17px;
         }
         li {
-            margin-bottom: 3px;
+            margin-bottom: 2px;
             text-align: justify;
         }
 
@@ -147,11 +151,12 @@
             .page {
                 margin: 0;
                 box-shadow: none;
-                min-height: 297mm;
+                min-height: 0;
             }
-            .page + .page {
-                page-break-before: always;
-            }
+            /* Let content flow across A4 pages, but never split a project or
+               orphan a section heading at the bottom of a page. */
+            .project { break-inside: avoid; }
+            h2 { break-after: avoid; }
         }
     </style>
 </head>
@@ -164,13 +169,13 @@
         </button>
     </div>
 
-    <!-- ══════════════════ PAGE 1 ══════════════════ -->
+    <!-- ══════════════════ RESUME (flows across A4 pages at print) ══════════════════ -->
     <div class="page">
 
         <!-- HEADER -->
         <header>
             <h1>Mohammed Rinshad M I</h1>
-            <p class="subtitle">AI Full-Stack Engineer &nbsp;|&nbsp; React, Next.js, Node.js &amp; Golang &nbsp;|&nbsp; LLM Apps, RAG, Multi-Agent Systems &amp; Cloud-Native APIs</p>
+            <p class="subtitle">Full-Stack Software Engineer &nbsp;|&nbsp; React, Next.js, Node.js, Golang &nbsp;|&nbsp; LLM Applications, RAG, Real-Time Systems &amp; Cloud-Native APIs</p>
             <div class="contact">
                 Palakkad, Kerala, India &nbsp;&bull;&nbsp;
                 <a href="mailto:rinshad803@gmail.com">rinshad803@gmail.com</a> &nbsp;&bull;&nbsp;
@@ -183,21 +188,19 @@
         <!-- SUMMARY -->
         <section>
             <h2>Summary</h2>
-            <p class="summary">AI-focused Full-Stack Engineer with 2.5+ years shipping 20+ production systems across React, Next.js, TypeScript, Node.js, Golang, and AWS. Builds React/Next.js front ends (React Server Components, SSR, React Query, Zustand, Tailwind) wired to Node.js and Go APIs that run LLM applications, RAG, multi-agent systems, and tool/function calling over PostgreSQL + pgvector, Redis, and WebSockets. Cut API latency 35%, eliminated a recurring runtime-error class via a live JS&rarr;TypeScript migration, and processed Stripe/PayPal billing with zero reconciliation failures.</p>
+            <p class="summary">Full-Stack Software Engineer with 2.5+ years of experience building and scaling production web and mobile applications using React, Next.js, React Native, Node.js, Express, Golang, MySQL, PostgreSQL, Redis, and AWS.</p>
+            <p class="summary">Shipped eCommerce, LMS, and AI-powered products end-to-end — Stripe and Razorpay payment systems, RAG and semantic-search features, and real-time collaboration platforms. Reduced API response times by 35%, raised Lighthouse performance from 62 to 89, and owned Docker, CI/CD, and Linux/VPS deployments for reliable, monitored releases.</p>
         </section>
 
-        <!-- TECHNICAL SKILLS -->
+        <!-- KEY ACHIEVEMENTS -->
         <section>
-            <h2>Technical Skills</h2>
-            <div class="skills">
-                <p><strong>Languages:</strong> TypeScript, JavaScript (ES6+), Python, Golang, SQL</p>
-                <p><strong>Frontend:</strong> React, Next.js (App Router, RSC, Server Actions, SSR), React Native, Tailwind CSS, shadcn/ui, Redux Toolkit, Zustand, TanStack Query</p>
-                <p><strong>Backend &amp; APIs:</strong> Node.js, Express, Golang, Gin, GORM, REST, GraphQL (familiar), WebSockets, Microservices, Event-Driven Architecture, Serverless, Webhooks, JWT/OAuth, Rate Limiting</p>
-                <p><strong>AI / LLM Engineering:</strong> Claude, OpenAI &amp; Gemini APIs, Vercel AI SDK, LangChain, LangGraph, RAG, Embeddings, Semantic Search (pgvector / HNSW), Tool/Function Calling, Multi-Agent &amp; Agentic Systems, MCP Servers</p>
-                <p><strong>Databases:</strong> PostgreSQL, pgvector, MongoDB, MySQL, Redis, SQLite</p>
-                <p><strong>Cloud &amp; DevOps:</strong> AWS (EC2, S3, Lambda, CloudWatch), Vercel, Docker, Docker Compose, Kubernetes (familiar), GitHub Actions CI/CD, Nginx</p>
-                <p><strong>Practices &amp; Tooling:</strong> Clean Architecture, Monorepos, Claude Code, Cursor, GitHub Copilot, Playwright, Sentry, Lighthouse</p>
-            </div>
+            <h2>Key Achievements</h2>
+            <ul>
+                <li><strong>Delivered 20+ production features</strong> across eCommerce, LMS, and AI platforms using React, React Native, and Node.js.</li>
+                <li><strong>Reduced API latency by 35% and raised Lighthouse score from 62 to 89</strong> through query optimization, indexing, code-splitting, and CDN delivery.</li>
+                <li><strong>Processed 2,000+ monthly transactions</strong> via Stripe and Razorpay integrations with webhook-driven order lifecycle management.</li>
+                <li><strong>Shipped LLM-powered features</strong> including RAG, semantic search, streaming chat, and AI workflow automation.</li>
+            </ul>
         </section>
 
         <!-- EXPERIENCE -->
@@ -205,59 +208,82 @@
             <h2>Experience</h2>
             <div class="entry-header">
                 <span class="entry-left">
-                    <strong>Infinite Open Source Solution LLP</strong> &mdash; Full Stack Developer, Calicut, Kerala
+                    <strong>Infinite Open Source Solution LLP</strong> &mdash; Software Engineer, Calicut, Kerala
                 </span>
                 <span class="entry-date">Nov 2023 – Present</span>
             </div>
+            <p class="tech-stack">React.js &bull; Node.js &bull; Express.js &bull; MySQL &bull; Sequelize &bull; Redis &bull; Docker &bull; Linux &bull; REST APIs</p>
             <ul>
-                <li><strong>Cut feature delivery time 30% across 20+ web and mobile apps</strong> by architecting a shared TypeScript component &amp; API-contract layer across React, Next.js, and React Native.</li>
-                <li><strong>Shipped production LLM features via the Vercel AI SDK</strong> — Claude/OpenAI streaming completions, tool/function calling, and RAG over PostgreSQL + pgvector inside Next.js Server Components and Node.js APIs.</li>
-                <li><strong>Reduced API response times 35% on high-traffic routes</strong> by profiling and re-indexing MongoDB, MySQL, and PostgreSQL queries behind real-time chat, payments, and AI dashboards.</li>
-                <li><strong>Designed multi-agent and tool-calling orchestration over Claude/OpenAI</strong> using LangChain/LangGraph patterns — wiring retrieval, function tools, and human-in-the-loop approvals.</li>
-                <li><strong>Processed Stripe and PayPal subscriptions with zero reconciliation failures</strong> by owning end-to-end billing — webhook verification, idempotent reconciliation, and retry logic.</li>
-                <li><strong>Established cloud-native observability and auth baselines</strong> on AWS (EC2, S3, Lambda) with Docker, GitHub Actions CI/CD, Sentry, and a reusable JWT/OAuth layer — cutting crash MTTR ~50%.</li>
+                <li><strong>Built a shared TypeScript component and API-contract library</strong> used across React, Next.js, and React Native projects, reducing duplicated code and speeding up feature delivery.</li>
+                <li><strong>Integrated Stripe and Razorpay payment gateways</strong> with webhook-driven order lifecycle management for a production eCommerce platform processing 2,000+ monthly transactions.</li>
+                <li><strong>Architected 40+ RESTful API endpoints</strong> using Express.js and Sequelize ORM with middleware-based input validation, JWT authentication, structured error handling, and SQL query optimization — reducing average API response time by 35%.</li>
+                <li><strong>Led frontend migration from Create React App to Vite</strong>, cutting build times from ~90s to ~35s (60%+ reduction) and accelerating developer iteration cycles across a 4-person frontend team.</li>
+                <li><strong>Optimized React rendering, code-splitting, and CDN-based static asset delivery</strong>, improving Lighthouse performance score from 62 to 89 and reducing initial page load time from 3.8s to 2.1s.</li>
+                <!-- <li><strong>Managed Linux VPS deployments end-to-end</strong> — Nginx reverse proxy, PM2 process management, SSL setup, and production incident troubleshooting.</li> -->
             </ul>
         </section>
 
-    </div>
-
-    <!-- ══════════════════ PAGE 2 ══════════════════ -->
-    <div class="page">
-
         <!-- PROJECTS -->
         <section>
-            <h2>Projects</h2>
+            <h2>Portfolio Projects</h2>
+            <p class="summary" style="margin-bottom: 4px;">Self-initiated projects built to explore production patterns in AI, real-time systems, and cloud-native architecture. Source available on <a href="https://github.com/MohdRinshadmi" target="_blank" rel="noopener" style="color:#1a1a1a;">github.com/MohdRinshadmi</a>.</p>
 
             <div class="project">
-                <p class="project-title">Cloud-Native IoT Analytics Platform</p>
-                <p class="tech-stack">React &bull; TypeScript &bull; Golang &bull; Gin &bull; PostgreSQL &bull; Redis &bull; Docker</p>
+                <div class="entry-header">
+                    <span class="entry-left"><strong>Cloud-Native IoT Analytics Platform</strong></span>
+                    <span class="entry-date">2024</span>
+                </div>
+                <p class="tech-stack">React &bull; TypeScript &bull; Golang &bull; Gin &bull; GORM &bull; PostgreSQL &bull; Redis &bull; Docker</p>
                 <ul>
-                    <li><strong>Architected a cloud-native IoT analytics platform (React + Golang)</strong> with Clean Architecture, repository/service-layer patterns, and dependency injection — structured as a scalable monorepo (frontend, backend, infrastructure, shared modules) for future microservice evolution.</li>
-                    <li><strong>Developed RESTful APIs and device-management services</strong> using Gin, GORM, PostgreSQL, and Redis with structured configuration management and middleware-based request handling.</li>
-                    <li><strong>Built reusable frontend infrastructure</strong> with TanStack Query, Zustand, feature-based modules, and type-safe API integrations.</li>
-                    <li><strong>Containerized the platform with Docker and Docker Compose</strong> for reproducible local development and deployment — real-time telemetry, MQTT event processing, WebSocket broadcasting, AI analytics, and Kubernetes deployment designed for future implementation.</li>
+                    <li><strong>Architected a cloud-native IoT analytics platform (React + Golang)</strong> with Clean Architecture, repository/service-layer patterns, and dependency injection — structured as a scalable monorepo separating frontend, backend, infrastructure, and shared modules.</li>
+                    <li><strong>Developed RESTful APIs and device-management services</strong> ingesting high-frequency telemetry using Gin, GORM, PostgreSQL, and Redis with structured configuration management and middleware-based request handling.</li>
+                    <li><strong>Built reusable frontend infrastructure</strong> with TanStack Query, Zustand, feature-based modules, and type-safe API integrations, reducing UI boilerplate across new dashboards.</li>
+                    <li><strong>Containerized backend, database, broker, and supporting services</strong> using Docker Compose, enabling one-command local deployment and consistent development environments.</li>
                 </ul>
             </div>
 
             <div class="project">
-                <p class="project-title">AI Life Assistant Super App</p>
-                <p class="tech-stack">React &bull; Next.js (App Router, RSC) &bull; Node.js &bull; TypeScript &bull; Gemini API &bull; PostgreSQL + pgvector &bull; Redis</p>
+                <div class="entry-header">
+                    <span class="entry-left"><strong>AI Life Assistant Super App</strong></span>
+                    <span class="entry-date">2024</span>
+                </div>
+                <p class="tech-stack">React &bull; Next.js (App Router, RSC) &bull; Node.js &bull; TypeScript &bull; Python &bull; Gemini API &bull; PostgreSQL + pgvector &bull; Redis</p>
                 <ul>
-                    <li><strong>Architected a voice-first AI assistant</strong> with streaming LLM chat, transcription, TTS playback, and tool calling across a React/Next.js streaming UI and Node.js APIs.</li>
-                    <li><strong>Built a production RAG pipeline</strong> using Gemini embeddings and PostgreSQL + pgvector.</li>
-                    <li><strong>Implemented HNSW-based similarity search</strong> for low-latency retrieval injected into the LLM system prompt.</li>
-                    <li><strong>Secured APIs</strong> using JWT refresh-token rotation and Redis-backed distributed rate limiting.</li>
+                    <li><strong>Architected a voice-first AI assistant</strong> with streaming LLM chat, speech-to-text transcription, TTS playback, and tool calling across a React/Next.js Server Components UI and Node.js APIs.</li>
+                    <li><strong>Indexed and retrieved knowledge from thousands of embedded documents</strong> using PostgreSQL + pgvector and HNSW indexing, delivering sub-second semantic search relevance.</li>
+                    <li><strong>Built Python data-ingestion scripts</strong> for chunking, embedding generation, and batch document indexing feeding the RAG pipeline.</li>
+                    <li><strong>Secured the API</strong> with JWT refresh-token rotation and Redis-backed rate limiting.</li>
                 </ul>
             </div>
 
             <div class="project">
-                <p class="project-title">AI-Powered Real-Time Collaboration Platform</p>
+                <div class="entry-header">
+                    <span class="entry-left"><strong>AI-Powered Real-Time Collaboration Platform</strong></span>
+                    <span class="entry-date">2023</span>
+                </div>
                 <p class="tech-stack">React &bull; Next.js &bull; TypeScript &bull; Node.js &bull; WebSockets &bull; Yjs (CRDT) &bull; PostgreSQL + pgvector &bull; Redis &bull; AWS</p>
                 <ul>
-                    <li><strong>Architected a real-time collaborative editor (Yjs CRDTs)</strong> with live presence, typing indicators, and automatic conflict resolution across concurrent editing sessions.</li>
+                    <li><strong>Built a CRDT-based collaborative editor using Yjs</strong> with real-time presence, typing indicators, and conflict-free synchronization across multiple concurrent clients.</li>
                     <li><strong>Engineered a stateless WebSocket fan-out server</strong> with channel-based routing and Redis pub/sub to sustain many concurrent editors.</li>
-                    <li><strong>Integrated streaming LLM workflows</strong> for inline summarization and agent actions on selected content, secured with a JWT/OAuth audit/ACL layer and idempotent webhooks on AWS.</li>
+                    <li><strong>Integrated streaming LLM features</strong> for inline summarization and actions on selected text, with JWT/OAuth access control.</li>
+                    <li><strong>Wrote end-to-end Playwright tests</strong> covering multi-user editing, reconnection, and conflict-resolution flows for release confidence.</li>
                 </ul>
+            </div>
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <p><strong>Languages:</strong> TypeScript, JavaScript, Python, Golang, SQL</p>
+                <p><strong>Frontend:</strong> React, Next.js (App Router, Server Components), React Native, Redux Toolkit, Zustand, TanStack Query, Tailwind CSS, Vite</p>
+                <p><strong>Backend &amp; APIs:</strong> Node.js, Express, Gin, Sequelize ORM, GORM, REST APIs, WebSockets, Redis Pub/Sub, JWT/OAuth</p>
+                <p><strong>Payments:</strong> Stripe, PayPal, Razorpay (webhook-driven order lifecycle)</p>
+                <p><strong>Databases:</strong> PostgreSQL, pgvector (HNSW), MongoDB, MySQL, Redis</p>
+                <p><strong>AI / LLM:</strong> Gemini, Groq, LangChain, Vercel AI SDK, RAG, Embeddings, Semantic Search, Streaming, Tool / Function Calling</p>
+                <p><strong>Architecture:</strong> Clean Architecture, Repository &amp; Service-Layer Patterns, Dependency Injection, Monorepo, CRDT (Yjs), Real-Time Systems</p>
+                <p><strong>Cloud &amp; DevOps:</strong> AWS, Docker, Docker Compose, GitHub Actions (CI/CD), Nginx, PM2, Linux/VPS</p>
+                <p><strong>Tools:</strong> Git, Playwright, Sentry, Lighthouse</p>
             </div>
         </section>
 

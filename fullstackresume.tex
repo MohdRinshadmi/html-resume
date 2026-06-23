@@ -1,0 +1,162 @@
+\documentclass[a4paper,10pt]{article}
+
+% ---------- Packages ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[
+  top=12mm,
+  bottom=12mm,
+  left=14mm,
+  right=14mm
+]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- Hyperref / PDF metadata (ATS-friendly: real text, no link recoloring) ----------
+\hypersetup{
+  pdftitle={Mohammed Rinshad M I - Full-Stack Software Engineer Resume},
+  pdfauthor={Mohammed Rinshad M I},
+  pdfsubject={Full-Stack Software Engineer},
+  pdfkeywords={React, Next.js, Node.js, Golang, TypeScript, RAG, LLM, PostgreSQL, AWS, Docker},
+  colorlinks=false,
+  pdfborder={0 0 0}
+}
+
+% ---------- Global typography ----------
+\linespread{1.05}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% ---------- Section headers (uppercase + full-width rule, parser-friendly) ----------
+\titleformat{\section}
+  {\large\bfseries\uppercase}
+  {}{0em}
+  {}[\vspace{1pt}\hrule height 0.8pt]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% ---------- List styling ----------
+\setlist[itemize]{
+  leftmargin=14pt,
+  topsep=2pt,
+  itemsep=2pt,
+  parsep=0pt,
+  partopsep=0pt,
+  label=\textbullet
+}
+
+% ---------- Helper macros ----------
+% Entry row: title (left, bold) + date (right, bold)
+\newcommand{\entry}[2]{%
+  \noindent\textbf{#1}\hfill\textbf{#2}\par
+}
+
+% Tech-stack line under an entry/project
+\newcommand{\stack}[1]{%
+  {\small\itshape\color{black!72}#1}\par
+}
+
+% ---------- Document ----------
+\begin{document}
+
+% ===== Header =====
+\begin{center}
+  {\LARGE\bfseries Mohammed Rinshad M I}\\[3pt]
+  {\footnotesize Full-Stack Software Engineer $\vert$ React, Next.js, Node.js, Golang $\vert$ LLM Applications, RAG, Real-Time Systems \& Cloud-Native APIs}\\[4pt]
+  {\footnotesize
+    Palakkad, Kerala, India \quad\textbullet\quad
+    \href{mailto:rinshad803@gmail.com}{rinshad803@gmail.com} \quad\textbullet\quad
+    \href{tel:+918848675355}{+91 88486 75355} \\[2pt]
+    \href{https://linkedin.com/in/mohd-rinshadmi}{linkedin.com/in/mohd-rinshadmi} \quad\textbullet\quad
+    \href{https://github.com/MohdRinshadmi}{github.com/MohdRinshadmi}
+  }
+\end{center}
+
+% ===== Summary =====
+\section{Summary}
+Full-Stack Software Engineer with 2.5+ years of experience building and scaling production web and mobile applications using React, Next.js, React Native, Node.js, Express, Golang, MySQL, PostgreSQL, Redis, and AWS.
+\vspace{4pt}
+
+Shipped eCommerce, LMS, and AI-powered products end-to-end --- Stripe and Razorpay payment systems, RAG and semantic-search features, and real-time collaboration platforms. Reduced API response times by 35\%, raised Lighthouse performance from 62 to 89, and owned Docker, CI/CD, and Linux/VPS deployments for reliable, monitored releases.
+
+% ===== Key Achievements =====
+\section{Key Achievements}
+\begin{itemize}
+  \item \textbf{Delivered 20+ production features} across eCommerce, LMS, and AI platforms using React, React Native, and Node.js.
+  \item \textbf{Reduced API latency by 35\% and raised Lighthouse score from 62 to 89} through query optimization, indexing, code-splitting, and CDN delivery.
+  \item \textbf{Processed 2,000+ monthly transactions} via Stripe and Razorpay integrations with webhook-driven order lifecycle management.
+  \item \textbf{Shipped LLM-powered features} including RAG, semantic search, streaming chat, and AI workflow automation.
+\end{itemize}
+
+% ===== Experience =====
+\section{Experience}
+\entry{Infinite Open Source Solution LLP --- Software Engineer, Calicut, Kerala}{Nov 2023 -- Present}
+\stack{React.js \textbullet\ Node.js \textbullet\ Express.js \textbullet\ MySQL \textbullet\ Sequelize \textbullet\ Redis \textbullet\ Docker \textbullet\ Linux \textbullet\ REST APIs}
+\begin{itemize}
+  \item \textbf{Migrated the entire codebase from JavaScript to TypeScript} across both web (React) and mobile (React Native) apps, adding full type safety that caught bugs early and made the code easier to maintain.
+  \item \textbf{Built a shared TypeScript component and API-contract library} used across React, Next.js, and React Native projects, reducing duplicated code and speeding up feature delivery.
+  \item \textbf{Integrated Stripe and Razorpay payment gateways} with webhook-driven order lifecycle management for a production eCommerce platform processing 2,000+ monthly transactions.
+  \item \textbf{Architected 40+ RESTful API endpoints} using Express.js and Sequelize ORM with middleware-based input validation, JWT authentication, structured error handling, and SQL query optimization --- reducing average API response time by 35\%.
+  \item \textbf{Led frontend migration from Create React App to Vite}, cutting build times from {\raise.17ex\hbox{$\scriptstyle\sim$}}90s to {\raise.17ex\hbox{$\scriptstyle\sim$}}35s (60\%+ reduction) and accelerating developer iteration cycles across a 4-person frontend team.
+  \item \textbf{Optimized React rendering, code-splitting, and CDN-based static asset delivery}, improving Lighthouse performance score from 62 to 89 and reducing initial page load time from 3.8s to 2.1s.
+\end{itemize}
+
+% ===== Portfolio Projects =====
+\filbreak
+\section{Portfolio Projects}
+Self-initiated projects built to explore production patterns in AI, real-time systems, and cloud-native architecture. Source available on \href{https://github.com/MohdRinshadmi}{github.com/MohdRinshadmi}.
+\vspace{4pt}
+
+\entry{Cloud-Native IoT Analytics Platform}{2024}
+\stack{React \textbullet\ TypeScript \textbullet\ Golang \textbullet\ Gin \textbullet\ GORM \textbullet\ PostgreSQL \textbullet\ Redis \textbullet\ Docker}
+\begin{itemize}
+  \item \textbf{Architected a cloud-native IoT analytics platform (React + Golang)} with Clean Architecture, repository/\allowbreak service-layer patterns, and dependency injection --- structured as a scalable monorepo separating frontend, backend, infrastructure, and shared modules.
+  \item \textbf{Developed RESTful APIs and device-management services} ingesting high-frequency telemetry using Gin, GORM, PostgreSQL, and Redis with structured configuration management and middleware-based request handling.
+  \item \textbf{Built reusable frontend infrastructure} with TanStack Query, Zustand, feature-based modules, and type-safe API integrations, reducing UI boilerplate across new dashboards.
+  \item \textbf{Containerized backend, database, broker, and supporting services} using Docker Compose, enabling one-command local deployment and consistent development environments.
+\end{itemize}
+
+\filbreak
+\entry{AI Life Assistant Super App}{2024}
+\stack{React \textbullet\ Next.js (App Router, RSC) \textbullet\ Node.js \textbullet\ TypeScript \textbullet\ Python \textbullet\ Gemini API \textbullet\ PostgreSQL + pgvector \textbullet\ Redis}
+\begin{itemize}
+  \item \textbf{Architected a voice-first AI assistant} with streaming LLM chat, speech-to-text transcription, TTS playback, and tool calling across a React/Next.js Server Components UI and Node.js APIs.
+  \item \textbf{Indexed and retrieved knowledge from thousands of embedded documents} using PostgreSQL + pgvector and HNSW indexing, delivering sub-second semantic search relevance.
+  \item \textbf{Built Python data-ingestion scripts} for chunking, embedding generation, and batch document indexing feeding the RAG pipeline.
+  \item \textbf{Secured the API} with JWT refresh-token rotation and Redis-backed rate limiting.
+\end{itemize}
+
+\filbreak
+\entry{AI-Powered Real-Time Collaboration Platform}{2023}
+\stack{React \textbullet\ Next.js \textbullet\ TypeScript \textbullet\ Node.js \textbullet\ WebSockets \textbullet\ Yjs (CRDT) \textbullet\ PostgreSQL + pgvector \textbullet\ Redis \textbullet\ AWS}
+\begin{itemize}
+  \item \textbf{Built a CRDT-based collaborative editor using Yjs} with real-time presence, typing indicators, and conflict-free synchronization across multiple concurrent clients.
+  \item \textbf{Engineered a stateless WebSocket fan-out server} with channel-based routing and Redis pub/sub to sustain many concurrent editors.
+  \item \textbf{Integrated streaming LLM features} for inline summarization and actions on selected text, with JWT/OAuth access control.
+  \item \textbf{Wrote end-to-end Playwright tests} covering multi-user editing, reconnection, and conflict-resolution flows for release confidence.
+\end{itemize}
+
+\filbreak
+
+% ===== Technical Skills =====
+\section{Technical Skills}
+\begin{itemize}[label={},leftmargin=0pt,itemsep=2pt]
+  \item \textbf{Languages:} TypeScript, JavaScript, Python, Golang, SQL
+  \item \textbf{Frontend:} React, Next.js (App Router, Server Components), React Native, Redux Toolkit, Zustand, TanStack Query, Tailwind CSS, Vite
+  \item \textbf{Backend \& APIs:} Node.js, Express, Gin, Sequelize ORM, GORM, REST APIs, WebSockets, Redis Pub/Sub, JWT/OAuth
+  \item \textbf{Payments:} Stripe, PayPal, Razorpay (webhook-driven order lifecycle)
+  \item \textbf{Databases:} PostgreSQL, pgvector (HNSW), MongoDB, MySQL, Redis
+  \item \textbf{AI / LLM:} Gemini, Groq, LangChain, Vercel AI SDK, RAG, Embeddings, Semantic Search, Streaming, Tool / Function Calling
+  \item \textbf{Architecture:} Clean Architecture, Repository \& Service-Layer Patterns, Dependency Injection, Monorepo, CRDT (Yjs), Real-Time Systems
+  \item \textbf{Cloud \& DevOps:} AWS, Docker, Docker Compose, GitHub Actions (CI/CD), Nginx, PM2, Linux/VPS
+  \item \textbf{Tools:} Git, Playwright, Sentry, Lighthouse
+\end{itemize}
+
+% ===== Education =====
+\section{Education}
+\entry{BBA, SJES College of Management --- Bangalore North University, Bangalore, India}{June 2019 -- Oct 2022}
+
+\end{document}
