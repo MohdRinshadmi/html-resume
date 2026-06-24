@@ -21,7 +21,7 @@
   pdftitle={Mohammed Rinshad M I - Full-Stack Software Engineer Resume},
   pdfauthor={Mohammed Rinshad M I},
   pdfsubject={Full-Stack Software Engineer},
-  pdfkeywords={React, Next.js, Node.js, Golang, TypeScript, RAG, LLM, PostgreSQL, AWS, Docker},
+  pdfkeywords={React, Next.js, Node.js, Golang, TypeScript, Python, RAG, LLM, Gemini, Groq, Ollama, PostgreSQL, pgvector, Redis, Stripe, Razorpay, Docker, AWS, GitHub Actions, Jest, Playwright},
   colorlinks=false,
   pdfborder={0 0 0}
 }
@@ -65,7 +65,7 @@
 % ===== Header =====
 \begin{center}
   {\LARGE\bfseries Mohammed Rinshad M I}\\[3pt]
-  {\footnotesize Full-Stack Software Engineer $\vert$ React, Next.js, Node.js, Golang $\vert$ LLM Applications, RAG, Real-Time Systems \& Cloud-Native APIs}\\[4pt]
+  {\footnotesize Full-Stack Software Engineer $\vert$ React, Next.js, Node.js, Golang $\vert$ AI/LLM \& Real-Time Systems}\\[4pt]
   {\footnotesize
     Palakkad, Kerala, India \quad\textbullet\quad
     \href{mailto:rinshad803@gmail.com}{rinshad803@gmail.com} \quad\textbullet\quad
@@ -80,14 +80,14 @@
 Full-Stack Software Engineer with 2.5+ years of experience building and scaling production web and mobile applications using React, Next.js, React Native, Node.js, Express, Golang, MySQL, PostgreSQL, Redis, and AWS.
 \vspace{4pt}
 
-Shipped eCommerce, LMS, and AI-powered products end-to-end --- Stripe and Razorpay payment systems, RAG and semantic-search features, and real-time collaboration platforms. Reduced API response times by 35\%, raised Lighthouse performance from 62 to 89, and owned Docker, CI/CD, and Linux/VPS deployments for reliable, monitored releases.
+Shipped eCommerce, LMS, and AI-powered products end-to-end --- Stripe, PayPal, and Razorpay payment systems, RAG and semantic-search features, and real-time collaboration platforms. Reduced API response times by 35\%, raised Lighthouse performance from 62 to 89, and owned Docker, CI/CD, and Linux/VPS deployments for reliable, monitored releases.
 
 % ===== Key Achievements =====
 \section{Key Achievements}
 \begin{itemize}
   \item \textbf{Delivered 20+ production features} across eCommerce, LMS, and AI platforms using React, React Native, and Node.js.
   \item \textbf{Reduced API latency by 35\% and raised Lighthouse score from 62 to 89} through query optimization, indexing, code-splitting, and CDN delivery.
-  \item \textbf{Processed 2,000+ monthly transactions} via Stripe and Razorpay integrations with webhook-driven order lifecycle management.
+  \item \textbf{Processed 2,000+ monthly transactions} via Stripe, PayPal, and Razorpay integrations with webhook-driven order lifecycle management.
   \item \textbf{Shipped LLM-powered features} including RAG, semantic search, streaming chat, and AI workflow automation.
 \end{itemize}
 
@@ -98,7 +98,7 @@ Shipped eCommerce, LMS, and AI-powered products end-to-end --- Stripe and Razorp
 \begin{itemize}
   \item \textbf{Migrated the entire codebase from JavaScript to TypeScript} across both web (React) and mobile (React Native) apps, adding full type safety that caught bugs early and made the code easier to maintain.
   \item \textbf{Built a shared TypeScript component and API-contract library} used across React, Next.js, and React Native projects, reducing duplicated code and speeding up feature delivery.
-  \item \textbf{Integrated Stripe and Razorpay payment gateways} with webhook-driven order lifecycle management for a production eCommerce platform processing 2,000+ monthly transactions.
+  \item \textbf{Integrated Stripe, PayPal, and Razorpay payment gateways} with webhook-driven order lifecycle management for a production eCommerce platform processing 2,000+ monthly transactions.
   \item \textbf{Architected 40+ RESTful API endpoints} using Express.js and Sequelize ORM with middleware-based input validation, JWT authentication, structured error handling, and SQL query optimization --- reducing average API response time by 35\%.
   \item \textbf{Led frontend migration from Create React App to Vite}, cutting build times from {\raise.17ex\hbox{$\scriptstyle\sim$}}90s to {\raise.17ex\hbox{$\scriptstyle\sim$}}35s (60\%+ reduction) and accelerating developer iteration cycles across a 4-person frontend team.
   \item \textbf{Optimized React rendering, code-splitting, and CDN-based static asset delivery}, improving Lighthouse performance score from 62 to 89 and reducing initial page load time from 3.8s to 2.1s.
@@ -107,7 +107,7 @@ Shipped eCommerce, LMS, and AI-powered products end-to-end --- Stripe and Razorp
 % ===== Portfolio Projects =====
 \filbreak
 \section{Portfolio Projects}
-Self-initiated projects built to explore production patterns in AI, real-time systems, and cloud-native architecture. Source available on \href{https://github.com/MohdRinshadmi}{github.com/MohdRinshadmi}.
+Self-initiated projects built to explore production patterns in AI, real-time systems, and cloud-native architecture --- running entirely on free-tier and open-source infrastructure (self-hosted Postgres/Redis, Docker, Gemini/Groq free tiers); no commercial users. Source: \href{https://github.com/MohdRinshadmi}{github.com/MohdRinshadmi}.
 \vspace{4pt}
 
 \entry{Cloud-Native IoT Analytics Platform}{2024}
@@ -131,7 +131,7 @@ Self-initiated projects built to explore production patterns in AI, real-time sy
 
 \filbreak
 \entry{AI-Powered Real-Time Collaboration Platform}{2023}
-\stack{React \textbullet\ Next.js \textbullet\ TypeScript \textbullet\ Node.js \textbullet\ WebSockets \textbullet\ Yjs (CRDT) \textbullet\ PostgreSQL + pgvector \textbullet\ Redis \textbullet\ AWS}
+\stack{React \textbullet\ Next.js \textbullet\ TypeScript \textbullet\ Node.js \textbullet\ WebSockets \textbullet\ Yjs (CRDT) \textbullet\ PostgreSQL + pgvector \textbullet\ Redis \textbullet\ Docker}
 \begin{itemize}
   \item \textbf{Built a CRDT-based collaborative editor using Yjs} with real-time presence, typing indicators, and conflict-free synchronization across multiple concurrent clients.
   \item \textbf{Engineered a stateless WebSocket fan-out server} with channel-based routing and Redis pub/sub to sustain many concurrent editors.
@@ -149,10 +149,10 @@ Self-initiated projects built to explore production patterns in AI, real-time sy
   \item \textbf{Backend \& APIs:} Node.js, Express, Gin, Sequelize ORM, GORM, REST APIs, WebSockets, Redis Pub/Sub, JWT/OAuth
   \item \textbf{Payments:} Stripe, PayPal, Razorpay (webhook-driven order lifecycle)
   \item \textbf{Databases:} PostgreSQL, pgvector (HNSW), MongoDB, MySQL, Redis
-  \item \textbf{AI / LLM:} Gemini, Groq, LangChain, Vercel AI SDK, RAG, Embeddings, Semantic Search, Streaming, Tool / Function Calling
+  \item \textbf{AI / LLM:} Gemini \& Groq (free tier), Ollama (local LLMs), LangChain, Vercel AI SDK, RAG, Embeddings, Semantic Search, Streaming, Tool / Function Calling
   \item \textbf{Architecture:} Clean Architecture, Repository \& Service-Layer Patterns, Dependency Injection, Monorepo, CRDT (Yjs), Real-Time Systems
-  \item \textbf{Cloud \& DevOps:} AWS, Docker, Docker Compose, GitHub Actions (CI/CD), Nginx, PM2, Linux/VPS
-  \item \textbf{Tools:} Git, Playwright, Sentry, Lighthouse
+  \item \textbf{Cloud \& DevOps:} AWS (free tier), Docker, Docker Compose, GitHub Actions (CI/CD), Nginx, PM2, Linux/VPS
+  \item \textbf{Tools:} Git, Playwright, Vitest, Jest, Sentry (free tier), Lighthouse
 \end{itemize}
 
 % ===== Education =====

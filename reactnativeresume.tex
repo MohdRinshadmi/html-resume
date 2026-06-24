@@ -17,16 +17,16 @@
 
 % ---------- Hyperref / PDF metadata (ATS-friendly: real text, no link recoloring) ----------
 \hypersetup{
-  pdftitle={Mohammed Rinshad M I - AI-Augmented React Native Engineer Resume},
+  pdftitle={Mohammed Rinshad M I - React Native Engineer Resume},
   pdfauthor={Mohammed Rinshad M I},
-  pdfsubject={AI-Augmented React Native Engineer},
-  pdfkeywords={React Native, TypeScript, JavaScript, Swift, Expo, Redux Toolkit, React Query, Reanimated, Native Modules, iOS, Android, WebSockets, WebRTC, RAG, LLM, Gemini, Groq, Whisper, Node.js, PostgreSQL, Redis, Stripe, App Store, Play Store},
+  pdfsubject={React Native Engineer},
+  pdfkeywords={React Native, TypeScript, JavaScript, Expo, Redux Toolkit, React Query, Reanimated, Native Modules, Swift, iOS, Android, Jest, Detox, WebSockets, WebRTC, RAG, LLM, Gemini, Groq, Whisper, Ollama, Node.js, PostgreSQL, Redis, Stripe, Razorpay, Fastlane, App Store, Play Store},
   colorlinks=false,
   pdfborder={0 0 0}
 }
 
 % ---------- Global typography ----------
-\linespread{1.04}
+\linespread{1.0}
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
 
@@ -35,7 +35,7 @@
   {\large\bfseries\uppercase}
   {}{0em}
   {}[\titlerule]
-\titlespacing*{\section}{0pt}{12pt}{4pt}
+\titlespacing*{\section}{0pt}{7pt}{3pt}
 
 % ---------- List styling ----------
 \setlist[itemize]{
@@ -65,7 +65,7 @@
 % ===== Header =====
 \begin{center}
   {\LARGE\bfseries Mohammed Rinshad M I}\\[3pt]
-  {\small AI-Augmented React Native Engineer $\vert$ Mobile + Full-Stack}\\[4pt]
+  {\small React Native Engineer $\vert$ iOS \& Android $\vert$ AI-Powered Mobile Apps}\\[4pt]
   {\footnotesize
     Palakkad, Kerala, India \quad\textbullet\quad
     \href{mailto:rinshad803@gmail.com}{rinshad803@gmail.com} \quad\textbullet\quad
@@ -77,22 +77,24 @@
 
 % ===== Summary =====
 \section{Summary}
-React Native engineer with 2.6+ years shipping 15+ cross-platform apps to the App Store and Play Store --- specializing in AI-powered mobile experiences: real-time AI chat, voice AI, streaming LLM responses, offline sync, push notifications, and WebRTC. Drove a live JS$\rightarrow$TypeScript migration that eliminated a recurring runtime-error class, owned Stripe/PayPal billing with zero reconciliation failures, and cut API latency 35\%. Integrates cloud and on-device AI (Gemini, Groq, Whisper) and owns the release pipeline end-to-end --- signing, store compliance, and monitoring.
+React Native engineer with 2.5+ years building and shipping cross-platform apps to the App Store and Play Store. At work, drove a live JavaScript$\rightarrow$TypeScript migration that removed a recurring class of runtime errors, built Stripe, PayPal, and Razorpay subscription billing with idempotent webhook reconciliation, and cut API latency 35\%. Builds AI-powered mobile features --- streaming LLM chat, voice and transcription, and offline sync --- on free-tier and open-source tooling (Gemini, Groq, on-device Whisper), and owns the release pipeline end-to-end: signing, store compliance, and monitoring.
 
 % ===== Experience =====
 \section{Experience}
-\entry{Infinite Open Source Solution LLP, Full Stack Developer -- Calicut, Kerala}{Nov 2023 -- Present}
+\entry{Infinite Open Source Solution LLP, Software Engineer -- Calicut, Kerala}{Nov 2023 -- Present}
 \begin{itemize}
-  \item \textbf{Cut feature delivery time 30\% across 20+ web and mobile apps} by architecting a reusable cross-platform TypeScript component library that replaced per-project rebuilds.
-  \item Designed and implemented an \textbf{Offline-First geolocation tracking system} using React Native and SQLite, enabling reliable background location capture, local data buffering, and retry-based recovery to ensure seamless workforce tracking even during prolonged network outages.
-  \item \textbf{Eliminated an entire class of production runtime errors} via a full JS-to-TypeScript migration on a live React Native codebase with strict typing and type-safe API contracts.
-  \item \textbf{Shipped 5+ React Native apps to App Store and Play Store independently} by owning the full release pipeline --- signing, build configs, store compliance, and staged rollouts.
-  \item \textbf{Processed Stripe and PayPal subscriptions with zero reconciliation failures} by owning end-to-end billing --- webhook verification, idempotent reconciliation, and retry logic.
+  \item \textbf{Cut feature-delivery time \textasciitilde30\%} by building a reusable cross-platform TypeScript component library, adopted across 15+ web and mobile projects to replace per-project rebuilds.
+  \item \textbf{Built an offline-first geolocation tracking system} with React Native and SQLite --- background location capture, local buffering, and retry-based recovery for reliable workforce tracking through prolonged network outages.
+  \item \textbf{Removed a recurring class of production runtime errors} via a full JavaScript-to-TypeScript migration on a live React Native codebase, with strict typing and type-safe API contracts.
+  \item \textbf{Shipped and maintained the company's cross-platform React Native apps} on the App Store and Play Store, owning the full release pipeline --- signing, build configs, store compliance, and staged rollouts.
+  \item \textbf{Built Stripe, PayPal, and Razorpay subscription billing} with idempotent, webhook-driven reconciliation and retry logic for dependable recurring payments.
 \end{itemize}
 
 % ===== Portfolio Projects =====
 \section{Portfolio Projects}
-\project{AI Life Assistant Super App (React Native)}{React Native \textbullet\ TypeScript \textbullet\ Gemini API / Groq API \textbullet\ Whisper \textbullet\ WebSockets \textbullet\ Reanimated \textbullet\ Native Modules (Swift)}
+Self-initiated projects, built on free-tier and open-source infrastructure; no commercial users. Source: \href{https://github.com/MohdRinshadmi}{github.com/MohdRinshadmi}.
+
+\project{AI Life Assistant Super App (React Native)}{React Native \textbullet\ TypeScript \textbullet\ Gemini \& Groq APIs (free tier) \textbullet\ Whisper (whisper.cpp, on-device) \textbullet\ WebSockets \textbullet\ Reanimated \textbullet\ Native Modules (Swift)}
 \begin{itemize}
   \item \textbf{Built a voice-first AI assistant} with streaming LLM chat, Whisper transcription, TTS playback, and tool calling --- 60fps message animations on iOS and Android.
   \item \textbf{Built a RAG pipeline} --- Gemini embeddings stored in PostgreSQL with pgvector, HNSW-indexed cosine similarity search injected into the LLM system prompt --- and hardened the API with JWT refresh-token family rotation and Redis-backed, multi-instance-safe rate limiting.
@@ -110,10 +112,12 @@ React Native engineer with 2.6+ years shipping 15+ cross-platform apps to the Ap
 \begin{itemize}[label={},leftmargin=0pt,itemsep=1.5pt]
   \item \textbf{Languages:} TypeScript, JavaScript (ES6+); Python (familiar)
   \item \textbf{React Native \& UI:} Expo, Redux Toolkit, React Query, Reanimated, Gesture Handler, Native Modules
-  \item \textbf{Mobile Platform:} Push Notifications (FCM / APNs), Background Tasks, Geolocation, In-App Purchases, App Store / Play Store releases
-  \item \textbf{Real-Time \& AI:} WebSockets, WebRTC, offline sync (SQLite), Gemini \& Groq APIs, Whisper, streaming chat, tool calling
-  \item \textbf{Backend \& Data:} Node.js, Express, REST APIs, JWT / OAuth, MongoDB, MySQL, Redis
-  \item \textbf{Tooling \& DevOps:} Git, GitHub Actions CI/CD, Docker, AWS, Xcode, Android Studio, Sentry, Claude Code / Cursor / Copilot
+  \item \textbf{Testing:} Jest, Detox, React Native Testing Library
+  \item \textbf{Mobile Platform:} Push Notifications (FCM / APNs), Background Tasks, Geolocation, In-App Purchases, App Store / Play Store releases, Fastlane
+  \item \textbf{Real-Time \& AI:} WebSockets, WebRTC, offline sync (SQLite), Gemini \& Groq APIs (free tier), on-device Whisper, Ollama (local LLMs), streaming chat, tool calling
+  \item \textbf{Backend \& Data:} Node.js, Express, REST APIs, JWT / OAuth, PostgreSQL (pgvector), MongoDB, MySQL, Redis
+  \item \textbf{Payments:} Stripe, PayPal, Razorpay (webhook-driven subscriptions \& order lifecycle)
+  \item \textbf{Tooling \& DevOps:} Git, GitHub Actions (CI/CD), Docker, AWS (free tier), Xcode, Android Studio, Sentry (free tier); AI-assisted dev: Continue.dev, Cline, Aider
 \end{itemize}
 
 % ===== Education =====
