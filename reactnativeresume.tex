@@ -54,8 +54,8 @@
 }
 
 % Project header: title (left) + tech stack on next line
-\newcommand{\project}[2]{%
-  \vspace{2pt}\noindent\textbf{#1}\par
+\newcommand{\project}[3]{%
+  \vspace{2pt}\noindent\textbf{#1}\hfill{\small\color{black!70}#3}\par
   {\small\itshape\color{black!70}#2}\par\vspace{1pt}%
 }
 
@@ -92,16 +92,16 @@ React Native engineer with 2.5+ years building and shipping cross-platform apps 
 
 % ===== Portfolio Projects =====
 \section{Portfolio Projects}
-Self-initiated projects, built on free-tier and open-source infrastructure; no commercial users. Source: \href{https://github.com/MohdRinshadmi}{github.com/MohdRinshadmi}.
+Self-initiated projects, built on free-tier and open-source infrastructure; no commercial users. Each links to its public GitHub repo.
 
-\project{AI Life Assistant Super App (React Native)}{React Native \textbullet\ TypeScript \textbullet\ Gemini \& Groq APIs (free tier) \textbullet\ Whisper (whisper.cpp, on-device) \textbullet\ WebSockets \textbullet\ Reanimated \textbullet\ Native Modules (Swift)}
+\project{AI Life Assistant Super App}{React Native \textbullet\ TypeScript \textbullet\ Gemini \& Groq APIs (free tier) \textbullet\ Whisper (whisper.cpp, on-device) \textbullet\ WebSockets \textbullet\ Reanimated \textbullet\ Native Modules (Swift)}{\href{https://github.com/MohdRinshadmi/ai-life-assistant}{github.com/MohdRinshadmi/ai-life-assistant}}
 \begin{itemize}
   \item \textbf{Built a voice-first AI assistant} with streaming LLM chat, Whisper transcription, TTS playback, and tool calling --- 60fps message animations on iOS and Android.
   \item \textbf{Built a RAG pipeline} --- Gemini embeddings stored in PostgreSQL with pgvector, HNSW-indexed cosine similarity search injected into the LLM system prompt --- and hardened the API with JWT refresh-token family rotation and Redis-backed, multi-instance-safe rate limiting.
   \item \textbf{Engineered a custom native audio module (Swift)} for low-latency mic capture and VAD, plus offline-first SQLite sync and push (FCM/APNs) for proactive agent actions.
 \end{itemize}
 
-\project{AI-Powered Real-Time Collaboration Platform (React Native)}{React Native \textbullet\ TypeScript \textbullet\ Yjs (CRDT) \textbullet\ WebSockets \textbullet\ WebRTC \textbullet\ Groq API}
+\project{AI-Powered Real-Time Collaboration Platform}{React Native \textbullet\ TypeScript \textbullet\ Yjs (CRDT) \textbullet\ WebSockets \textbullet\ WebRTC \textbullet\ Groq API}{\href{https://github.com/MohdRinshadmi/ai-real-time-collaboration}{github.com/MohdRinshadmi/ai-real-time-collaboration}}
 \begin{itemize}
   \item \textbf{Built a CRDT-based collaboration app (Yjs)} with live presence, typing indicators, and conflict-free offline edits across iOS and Android.
   \item \textbf{Integrated WebRTC voice notes and inline AI} --- streaming Groq completions, summarization, and tool calling on document selections at 60fps via Reanimated.
